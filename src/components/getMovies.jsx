@@ -3,14 +3,14 @@ import React from 'react';
 import { useState } from 'react';
 import '../style/main.css'
 
-var api = 'http://www.omdbapi.com/?apikey=20b49b64&t='
+var api = 'https://www.omdbapi.com/?apikey=20b49b64&t='
 
 
 const Movies = () =>{
     const [title, setTitle] = useState('')
     const [data, setData] = useState()
     function getMovies(){
-        axios.get('http://www.omdbapi.com/?apikey=20b49b64&t='+ title)
+        axios.get('https://www.omdbapi.com/?apikey=20b49b64&t='+ title)
         .then(response => {
             setData(response.data)
         })
